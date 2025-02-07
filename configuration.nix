@@ -109,22 +109,22 @@
     pkgs.helix
   ];
 
-  programs.helix = {
-    enable = true;
-    settings = {
-      theme = "catppuccin_frappe";
-      editor.text-width = 80;
-      editor.mouse = false;
-      editor.file-picker.hidden = false;
-      editor.statusline.left = ["mode", "spinner", "read-only-indicator", "file-modification-indicator"]
-      editor.statusline.center = ["file-name"]
-      editor.statusline.right = ["diagnostics", "selections", "position", "file-encoding", "file-line-ending", "file-type"]
-      editor.statusline.separator = "│"
-      editor.statusline.mode.normal = "NORMAL"
-      editor.statusline.mode.insert = "INSERT"
-      editor.statusline.mode.select = "SELECT"
-    };
-  };
+  # programs.helix = {
+  #   enable = true;
+  #   settings = {
+  #     theme = "catppuccin_frappe";
+  #     editor.text-width = 80;
+  #     editor.mouse = false;
+  #     editor.file-picker.hidden = false;
+  #     editor.statusline.left = ["mode" "spinner" "read-only-indicator" "file-modification-indicator"];
+  #     editor.statusline.center = ["file-name"];
+  #     editor.statusline.right = ["diagnostics" "selections" "position" "file-encoding" "file-line-ending" "file-type"];
+  #     editor.statusline.separator = "│";
+  #     editor.statusline.mode.normal = "NORMAL";
+  #     editor.statusline.mode.insert = "INSERT";
+  #     editor.statusline.mode.select = "SELECT";
+  #   };
+  # };
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
