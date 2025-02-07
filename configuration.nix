@@ -68,6 +68,14 @@
 
   # programs.firefox.enable = true;
 
+  # Setup passwordless sudo
+  security.sudo.extraRules = [{
+    users = ["overbyte"];
+    commands  = [{ command = "ALL";
+      options = ["NOPASSWD"];
+    }];
+  }];
+
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
@@ -90,6 +98,8 @@
 
   # Enable the OpenSSH daemon.
   services.openssh.enable = true;
+  services.openssh.settings.PasswordAuthentication = false;
+  services.openssh.settings.KbdInteractiveAuthentication = false;
 
   # Open ports in the firewall.
   # networking.firewall.allowedTCPPorts = [ ... ];
