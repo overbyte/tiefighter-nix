@@ -115,7 +115,7 @@
 
   services.cage = {
     enable = true;
-    program = "${pkgs.electron}/bin/electron https://www.google.com";
+    program = "${pkgs.electron}/bin/electron https://www.theflipclock.com";
     user = "overbyte";
   };
 
