@@ -1,6 +1,6 @@
 # Tie Fighter Nix Setup
 
-A kiosk computer implementation
+A kiosk computer implementation. Heavily leans on https://github.com/jamesdury/kiosk-on-a-stick
 
 ## Disk setup
 
