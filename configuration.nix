@@ -107,7 +107,32 @@
     curl
     git
     pkgs.helix
+    cage
+    electron
   ];
+
+  services.cage = {
+    enable = true;
+    program = "${pkgs.electron}/bin/electron https://www.google.com";
+    user = "overbyte";
+  };
+
+  systemd.services.cage-tty1 = {
+    # confirm network connection is active before running
+    after = [ "network-online.target" ];
+    wants = [ "network-online.target" ];
+    serviceConfig = {
+      Environment = [
+        # Prevent cage failing when no input devices are present
+        "WLR_LIBINPUT_NO_DEVICES=1"
+        # REVISIT: Use x11 BE instead of Wayland
+        # firefox starts with black screen otherwise
+        "MOZ_ENABLE_WAYLAND=0"
+        # Better touch response and gesture support for touchscreens
+        "MOZ_USE_XINPUT2=1"
+      ];
+    };
+  };
 
   # programs.helix = {
   #   enable = true;
