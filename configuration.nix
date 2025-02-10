@@ -38,29 +38,29 @@
   # services.xserver.enable = true;
 
   # Add Gnome - see https://nixos.wiki/wiki/GNOME 
-  services.xserver = {
-    enable = true;
-    displayManager.gdm.enable = true;
-    desktopManager.gnome.enable = true;
-  };
+  # services.xserver = {
+  #   enable = true;
+  #   displayManager.gdm.enable = true;
+  #   desktopManager.gnome.enable = true;
+  # };
   
   # Exclude some gnome packages
-  environment.gnome.excludePackages = (with pkgs; [
-    atomix # puzzle game
-    cheese # webcam tool
-    epiphany # web browser
-    evince # document viewer
-    geary # email reader
-    gedit # text editor
-    gnome-characters
-    gnome-music
-    gnome-photos
-    gnome-tour
-    hitori # sudoku game
-    iagno # go game
-    tali # poker game
-    totem # video player
-  ]);
+  # environment.gnome.excludePackages = (with pkgs; [
+  #   atomix # puzzle game
+  #   cheese # webcam tool
+  #   epiphany # web browser
+  #   evince # document viewer
+  #   geary # email reader
+  #   gedit # text editor
+  #   gnome-characters
+  #   gnome-music
+  #   gnome-photos
+  #   gnome-tour
+  #   hitori # sudoku game
+  #   iagno # go game
+  #   tali # poker game
+  #   totem # video player
+  # ]);
 
   # Configure keymap in X11
   services.xserver.xkb.layout = "us";
@@ -170,6 +170,5 @@
   #
   # For more information, see `man configuration.nix` or https://nixos.org/manual/nixos/stable/options#opt-system.stateVersion .
   system.stateVersion = "24.11"; # Did you read the comment?
-
 }
 
