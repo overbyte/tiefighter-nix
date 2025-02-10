@@ -89,6 +89,7 @@
   };
 
   # programs.firefox.enable = true;
+  programs.git.enable = true;
 
   # Setup passwordless sudo
   security.sudo.extraRules = [{
