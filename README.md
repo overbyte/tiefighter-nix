@@ -1,5 +1,7 @@
 # Tie Fighter Nix Setup
 
+A kiosk computer implementation
+
 ## Disk setup
 
 * Download ISO Image from https://nixos.org/download.html#nixos-iso
